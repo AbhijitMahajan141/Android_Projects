@@ -111,6 +111,7 @@ public class Item_Info extends AppCompatActivity {
                     data.put("extramsg",ext_msg);
                     data.put("vendor",vendor);
                     String orderid = databaseReference.push().getKey();
+                    data.put("item_id",orderid);
                     databaseReference.child(orderid).setValue(data).addOnSuccessListener(new OnSuccessListener<Void>() {
                         @Override
                         public void onSuccess(Void aVoid) {

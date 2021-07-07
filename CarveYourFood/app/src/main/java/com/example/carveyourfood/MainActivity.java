@@ -22,7 +22,7 @@ import com.google.firebase.database.ValueEventListener;
 import java.util.ArrayList;
 
 public class MainActivity extends AppCompatActivity implements RecyclerAdapter.OnItemListener{
-    Button logout;
+    Button logout,send_recipe;
     private RecyclerAdapter adapter;
     private ArrayList<Upload> list;
     private RecyclerView recyclerView;
@@ -40,6 +40,8 @@ public class MainActivity extends AppCompatActivity implements RecyclerAdapter.O
         if(!us.isEmpty()){
         logout.setText("Logout");
         user_name.setText(us);}
+
+        send_recipe = (Button) findViewById(R.id.send_reci);
 
         logout.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -83,6 +85,14 @@ public class MainActivity extends AppCompatActivity implements RecyclerAdapter.O
             @Override
             public void onCancelled(@NonNull DatabaseError error) {
 
+            }
+        });
+
+        send_recipe.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i = new Intent(MainActivity.this,create_recipe.class);
+                startActivity(i);
             }
         });
 

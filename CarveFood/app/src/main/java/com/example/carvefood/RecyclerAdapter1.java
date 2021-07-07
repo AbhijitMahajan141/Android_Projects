@@ -39,13 +39,13 @@ public class RecyclerAdapter1 extends RecyclerView.Adapter<RecyclerAdapter1.MyVi
     public void onBindViewHolder(@NonNull MyViewHolder holder, int position) {
 
         Upload1 upload = mList.get(position);
-        holder.item_name.setText(upload.getItem_n());
-        holder.item_desc.setText(upload.getItem_desc());
-        holder.item_ing.setText(upload.getItem_ing());
-        holder.item_cost.setText(upload.getItem_c());
-        holder.extra_ing.setText(upload.getExtra_ing());
-        holder.extra_msg.setText(upload.getExtra_msg());
-        Glide.with(context).load(mList.get(position).getImage_u()).into(holder.item_image);
+        holder.item_name.setText(upload.getName());
+        holder.item_desc.setText(upload.getDesc());
+        holder.item_ing.setText(upload.getIng());
+        holder.item_cost.setText(upload.getCost());
+        holder.extra_ing.setText(upload.getExtraing());
+        holder.extra_msg.setText(upload.getExtramsg());
+        //Glide.with(context).load(mList.get(position).getImage_u()).into(holder.item_image);
 
     }
 
@@ -57,7 +57,7 @@ public class RecyclerAdapter1 extends RecyclerView.Adapter<RecyclerAdapter1.MyVi
     public static class MyViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener{
 
         TextView item_name,item_desc,item_ing,item_cost,extra_ing,extra_msg;
-        ImageView item_image;
+        //ImageView item_image;
         OnItemListener onItemListener;
         Button card_delete_btn;
 
@@ -68,12 +68,12 @@ public class RecyclerAdapter1 extends RecyclerView.Adapter<RecyclerAdapter1.MyVi
             item_desc = itemView.findViewById(R.id.card_item_desc1);
             item_ing = itemView.findViewById(R.id.card_item_ing1);
             item_cost = itemView.findViewById(R.id.card_item_cost1);
-            item_image = itemView.findViewById(R.id.card_item_image1);
+            //item_image = itemView.findViewById(R.id.card_item_image1);
             extra_ing = itemView.findViewById(R.id.card_extra_ing1);
             extra_msg = itemView.findViewById(R.id.card_extra_msg1);
             this.onItemListener = onItemListener;
 
-            /*card_delete_btn = itemView.findViewById(R.id.card_delete_btn);
+            card_delete_btn = itemView.findViewById(R.id.card_delete_btn);
             card_delete_btn.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
@@ -84,7 +84,7 @@ public class RecyclerAdapter1 extends RecyclerView.Adapter<RecyclerAdapter1.MyVi
                         }
                     }
                 }
-            });*/
+            });
 
             itemView.setOnClickListener(this);
 

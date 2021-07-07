@@ -2,97 +2,78 @@ package com.example.carvefood;
 
 import android.os.Parcel;
 import android.os.Parcelable;
+import android.widget.ImageView;
 
 public class Upload1 {
-    //private String n;
-    private String image_u, item_n, item_desc, item_ing, item_c, extra_ing, extra_msg, usr_id, vndr_id;
+    String name,desc,ing,cost,extraing,extramsg,item_id;
 
-    public Upload1() {
+    public Upload1(){}
 
+    public Upload1(String name, String desc, String ing, String cost, String extraing, String extramsg,String item_id) {
+        this.name = name;
+        this.desc = desc;
+        this.ing = ing;
+        this.cost = cost;
+        this.extraing = extraing;
+        this.extramsg = extramsg;
+        this.item_id = item_id;
     }
 
-    public Upload1(String image_uri, String item_name, String item_description, String item_ingredients, String item_cost, String extra_ingredients, String extra_message, String user_id, String vendor_id) {
-
-        image_u = image_uri;
-        item_n = item_name;
-        item_desc = item_description;
-        item_ing = item_ingredients;
-        item_c = item_cost;
-        extra_ing = extra_ingredients;
-        extra_msg = extra_message;
-        usr_id = user_id;
-        vndr_id = vendor_id;
+    public String getItem_id() {
+        return item_id;
     }
 
-    public String getImage_u() {
-        return image_u;
+    public void setItem_id(String item_id) {
+        this.item_id = item_id;
     }
 
-    public void setImage_u(String image_u) {
-        this.image_u = image_u;
+    public String getExtraing() {
+        return extraing;
     }
 
-    public String getItem_n() {
-        return item_n;
+    public void setExtraing(String extraing) {
+        this.extraing = extraing;
     }
 
-    public void setItem_n(String item_n) {
-        this.item_n = item_n;
+    public String getExtramsg() {
+        return extramsg;
     }
 
-    public String getItem_desc() {
-        return item_desc;
+    public void setExtramsg(String extramsg) {
+        this.extramsg = extramsg;
     }
 
-    public void setItem_desc(String item_desc) {
-        this.item_desc = item_desc;
+    public String getName() {
+        return name;
     }
 
-    public String getItem_ing() {
-        return item_ing;
+    public void setName(String name) {
+        this.name = name;
     }
 
-    public void setItem_ing(String item_ing) {
-        this.item_ing = item_ing;
+    public String getDesc() {
+        return desc;
     }
 
-    public String getItem_c() {
-        return item_c;
+    public void setDesc(String desc) {
+        this.desc = desc;
     }
 
-    public void setItem_c(String item_c) {
-        this.item_c = item_c;
+    public String getIng() {
+        return ing;
     }
 
-    public String getExtra_ing() {
-        return extra_ing;
+    public void setIng(String ing) {
+        this.ing = ing;
     }
 
-    public void setExtra_ing(String extra_ing) {
-        this.extra_ing = extra_ing;
+    public String getCost() {
+        return cost;
     }
 
-    public String getExtra_msg() {
-        return extra_msg;
+    public void setCost(String cost) {
+        this.cost = cost;
     }
 
-    public void setExtra_msg(String extra_msg) {
-        this.extra_msg = extra_msg;
-    }
 
-    public String getUsr_id() {
-        return usr_id;
-    }
-
-    public void setUsr_id(String usr_id) {
-        this.usr_id = usr_id;
-    }
-
-    public String getVndr_id() {
-        return vndr_id;
-    }
-
-    public void setVndr_id(String vndr_id) {
-        this.vndr_id = vndr_id;
-    }
 }

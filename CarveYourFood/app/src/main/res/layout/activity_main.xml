@@ -56,6 +56,7 @@
             android:layout_centerHorizontal="true"
             android:layout_below="@id/menu_item_txt"/>
 
+
     </RelativeLayout>
     <RelativeLayout
         android:layout_width="match_parent"
@@ -64,32 +65,23 @@
         android:layout_alignParentBottom="true"
         android:layout_marginTop="180dp">
 
-        <com.google.android.material.textfield.TextInputLayout
-            android:id="@+id/item_search_cont"
+        <Button
+            android:id="@+id/send_reci"
             android:layout_width="250dp"
-            android:layout_height="wrap_content"
+            android:layout_height="70dp"
             android:layout_marginTop="20dp"
-            android:hint="Search Here"
-            app:boxBackgroundColor="#D9CFEA"
+            android:text="Send Recipe"
             android:layout_alignParentTop="true"
             android:layout_centerHorizontal="true"
             app:boxCornerRadiusTopEnd="10dp"
-            app:boxCornerRadiusTopStart="10dp"
-            app:startIconDrawable="@drawable/ic_baseline_search_24"
-            android:focusedByDefault="false"
-            style="@style/Widget.MaterialComponents.TextInputLayout.FilledBox">
-            <com.google.android.material.textfield.TextInputEditText
-                android:id="@+id/item_search"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:inputType="text"/>
-        </com.google.android.material.textfield.TextInputLayout>
+            app:boxCornerRadiusTopStart="10dp">
+        </Button>
 
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/recycler_view"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_below="@+id/item_search_cont"
+            android:layout_below="@+id/send_reci"
             android:layout_centerHorizontal="true"
             android:layout_marginTop="20dp"
             android:layout_marginStart="110dp"/>

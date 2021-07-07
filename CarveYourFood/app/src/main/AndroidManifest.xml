@@ -13,6 +13,9 @@
             android:name="com.example.carveyourfood.Login"
             android:windowSoftInputMode="adjustUnspecified|stateUnchanged|stateHidden|stateAlwaysHidden|adjustPan"/>
         <activity
+            android:name="com.example.carveyourfood.create_recipe"
+            android:windowSoftInputMode="adjustUnspecified|stateUnchanged|stateHidden|stateAlwaysHidden|adjustPan"/>
+        <activity
             android:name="com.example.carveyourfood.Signin"
             android:windowSoftInputMode="adjustUnspecified|stateUnchanged|stateHidden|stateAlwaysHidden|adjustPan"/>
         <activity

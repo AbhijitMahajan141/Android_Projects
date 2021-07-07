@@ -14,6 +14,7 @@ public class MainActivity extends AppCompatActivity implements BottomNavigationV
     Home_Fragment homeFragment = new Home_Fragment();
     ViewItems viewItemsFrag = new ViewItems();
     Profile profileFragment = new Profile();
+    Orders order = new Orders();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -31,6 +32,11 @@ public class MainActivity extends AppCompatActivity implements BottomNavigationV
             case R.id.add :
                 getSupportFragmentManager().beginTransaction().replace(R.id.container, this.addFragment).commit();
                 return true;
+
+            case R.id.Orders :
+                getSupportFragmentManager().beginTransaction().replace(R.id.container, this.order).commit();
+                return true;
+
             case R.id.finished_order :
                 getSupportFragmentManager().beginTransaction().replace(R.id.container, this.viewItemsFrag).commit();
                 return true;
